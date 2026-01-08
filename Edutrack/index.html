@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduTrack - Student Progress Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div id="login">
+    <h1>EduTrack Login</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p>Teacher: teacher / 1234<br>Student: student / 1234</p>
+</div>
+
+<div id="system">
+    <h1>EduTrack</h1>
+    <p id="roleText"></p>
+    <button onclick="logout()">Logout</button>
+
+    <div id="teacherArea">
+        <h2>Add Student Record</h2>
+        <input type="text" id="studentName" placeholder="Student Name">
+        <input type="number" id="grade" placeholder="Grade">
+        <select id="attendance">
+            <option value="">Select Attendance</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <h2>Student Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Attendance</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="records"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
